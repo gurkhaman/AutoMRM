@@ -1,0 +1,8 @@
+pyspark
+timm
+git+https://github.com/openai/CLIP.git
+pandas
+sklearn
+tensorboard
+numpy==1.26.4
+matplotlib
