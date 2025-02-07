@@ -11,7 +11,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 # Load the model
 device = "cuda" if torch.cuda.is_available() else "cpu"
-print(device)
+print("Current device:", device)
 model2, preprocess = clip.load('ViT-B/32', device)
 
 
