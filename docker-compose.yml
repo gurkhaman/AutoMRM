@@ -1,0 +1,13 @@
+services:
+  automrm:
+    image: pytorch/pytorch:1.13.0-cuda11.6-cudnn8-runtime
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            device_ids: ['0']
+            capabilities: [gpu]
+    stdin_open: true
+    tty: true
+    ipc: host
