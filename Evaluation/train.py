@@ -25,7 +25,7 @@ from torch.utils.tensorboard import SummaryWriter
 from conf import settings
 from utils10 import get_network, get_training_dataloader, get_test_dataloader, WarmUpLR, \
     most_recent_folder, most_recent_weights, last_epoch, best_acc_weights
-os.environ["CUDA_VISIBLE_DEVICES"] = "3"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 def train(epoch):
 
     start = time.time()
@@ -71,7 +71,7 @@ def train(epoch):
     for name, param in net.named_parameters():
         layer, attr = os.path.splitext(name)
         attr = attr[1:]
-        writer.add_histogram("{}/{}".format(layer, attr), param, epoch)
+        # writer.add_histogram("{}/{}".format(layer, attr), param, epoch)
 
     finish = time.time()
 
