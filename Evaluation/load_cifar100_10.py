@@ -27,7 +27,7 @@ def load_cifar100_superclass(is_train, shots=-1, superclass_type='predefined', t
         transform = transforms.Compose([transforms.ToTensor(),
                                         normalize])
 
-    dataset =  datasets.CIFAR100(root=os.path.expanduser("~/.cache"), train=is_train, transform=transform)
+    dataset =  datasets.CIFAR100(root=os.path.expanduser("~/.cache"), train=is_train, transform=transform, download=True)
 
     if superclass_type == 'predefined':
         if 0 <= target_superclass_idx <= 19:
