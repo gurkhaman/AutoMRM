@@ -2,3 +2,5 @@ __pycache__/
 *.pyc
 *.pth
 Evaluation/runs/
+Evaluation/logs/
+Evaluation/models/__pycache__
