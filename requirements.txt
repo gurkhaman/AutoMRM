@@ -6,3 +6,6 @@ sklearn
 tensorboard
 numpy==1.26.4
 matplotlib
+ray[default]
+py-spy
+memray

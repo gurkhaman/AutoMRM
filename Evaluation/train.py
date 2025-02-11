@@ -25,7 +25,7 @@ from torch.utils.tensorboard import SummaryWriter
 from conf import settings
 from utils10 import get_network, get_training_dataloader, get_test_dataloader, WarmUpLR, \
     most_recent_folder, most_recent_weights, last_epoch, best_acc_weights
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+# os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2"
 def train(epoch):
 
     start = time.time()
@@ -142,7 +142,7 @@ if __name__ == '__main__':
         num_workers=4,
         batch_size=args.b,
         ds_num=args.d,
-        shuffle=True
+        shuffle=True,
     )
 
     cifar100_test_loader = get_test_dataloader(
