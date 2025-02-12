@@ -1,6 +1,9 @@
-__pycache__/
+**/__pycache__/
 *.pyc
 *.pth
 Evaluation/runs/
 Evaluation/logs/
+Evaluation/test_logs/
 Evaluation/models/__pycache__
+cifar-100-python
+cifar-100-python.tar.gz
